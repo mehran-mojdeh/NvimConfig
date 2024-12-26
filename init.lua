@@ -1,0 +1,7 @@
+require('base')
+require('plugins')
+require('highlights')
+require('maps')
+require('clipboard')
+require('theme')
+require('plugin_config')
