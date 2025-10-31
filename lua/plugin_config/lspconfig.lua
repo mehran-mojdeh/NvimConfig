@@ -38,12 +38,12 @@ lspconfig.html.setup {
   capabilities = capabilities,
 }
 -- CSS
-lspconfig.cssls.setup {
-  capabilities = capabilities,
-}
-lspconfig.cssmodules_ls.setup{
-  capabilities = capabilities,
-}
+-- lspconfig.cssls.setup {
+--   capabilities = capabilities,
+-- }
+-- lspconfig.cssmodules_ls.setup{
+--   capabilities = capabilities,
+-- }
 -- eslint
 lspconfig.eslint.setup{
   on_attach = on_attach,
