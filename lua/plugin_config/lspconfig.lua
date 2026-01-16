@@ -1,5 +1,7 @@
-local lspconfig = require('lspconfig')
-local protocol = require('vim.lsp.protocol')
+local lspconfig = vim.lsp.config
+local enable = vim.lsp.enable
+--local lspconfig = require('lspconfig')
+--local protocol = require('vim.lsp.protocol')
 
 local on_attach = function(client, bufnr)
   -- formatting
@@ -17,44 +19,45 @@ end
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- TypeScript
-lspconfig.ts_ls.setup {
+enable('ts_ls', {
   on_attach = on_attach,
   capabilities = capabilities,
-}
+})
+
 -- Tailwind
-lspconfig.tailwindcss.setup{
+enable('tailwindcss',{
   capabilities = capabilities,
-}
+})
 -- SQL
-lspconfig.sqlls.setup{
+enable('sqlls',{
   capabilities = capabilities,
-}
+})
 -- JSON
-lspconfig.jsonls.setup {
+enable('jsonls', {
   capabilities = capabilities,
-}
+})
 -- html
-lspconfig.html.setup {
+enable('html', {
   capabilities = capabilities,
-}
+})
 -- CSS
--- lspconfig.cssls.setup {
---   capabilities = capabilities,
--- }
--- lspconfig.cssmodules_ls.setup{
---   capabilities = capabilities,
--- }
+enable('cssls', {
+  capabilities = capabilities,
+})
+enable('cssmodules_ls',{
+  capabilities = capabilities,
+})
 -- eslint
-lspconfig.eslint.setup{
+enable('eslint',{
   on_attach = on_attach,
   capabilities = capabilities,
-}
+})
 -- graphql
-lspconfig.graphql.setup{
+enable('graphql',{
   capabilities = capabilities,
-}
+})
 -- bash
-lspconfig.bashls.setup{
+enable('bashls',{
   capabilities = capabilities,
-}
+})
 
