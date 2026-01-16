@@ -79,6 +79,15 @@ return packer.startup(function(use)
     ft = {'javascript', 'typescript', 'css', 'less', 'scss', 'graphql', 'markdown', 'vue', 'html'}
   }
 
+  use({
+    'MeanderingProgrammer/render-markdown.nvim',
+    after = { 'nvim-treesitter' },
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }, -- if you prefer nvim-web-devicons
+    config = function()
+        require('render-markdown').setup({})
+    end,
+})
+
 
   if PACKER_BOOTSTRAP then
 		require("packer").sync()
