@@ -3,6 +3,9 @@ local keymap = vim.keymap
 -- Leader key
 vim.g.mapleader = ' ' -- Space
 
+-- Toggle word wrap
+keymap.set('n', '<C-w>', ':set wrap!<CR>', { noremap = true, silent = true })
+
 -- Do not yank with x
 keymap.set('n', 'x', '"_x')
 
